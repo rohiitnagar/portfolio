@@ -100,7 +100,10 @@ Secure platform for doctors, pharmacists, and patients.
 ## 🔥 GitHub Contribution Streak
 
 <p align="center">
-  <img src="./assets/github-streak.svg" alt="GitHub Contribution Streak" />
+  <img
+    src="./profile/streak.svg"
+    alt="GitHub Contribution Streak"
+  />
 </p>
 
 ---
