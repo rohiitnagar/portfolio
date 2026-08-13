@@ -86,8 +86,6 @@ Secure platform for doctors, pharmacists, and patients.
 
 ## 📊 GitHub Stats
 
-## 📊 GitHub Stats
-
 <p align="center">
   <img
     src="https://github-stats-extended.vercel.app/api?username=rohiitnagar&show_icons=true&theme=tokyonight"
@@ -99,11 +97,10 @@ Secure platform for doctors, pharmacists, and patients.
   />
 </p>
 
+## 🔥 GitHub Contribution Streak
+
 <p align="center">
-  <img
-    src="https://streak-stats.demolab.com/?user=rohiitnagar&theme=tokyonight"
-    height="170"
-  />
+  <img src="./assets/github-streak.svg" alt="GitHub Contribution Streak" />
 </p>
 
 ---
