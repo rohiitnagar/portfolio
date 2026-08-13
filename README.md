@@ -84,16 +84,18 @@ Secure platform for doctors, pharmacists, and patients.
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Statistics
 
 <p align="center">
   <img
-    src="https://github-stats-extended.vercel.app/api?username=rohiitnagar&show_icons=true&theme=tokyonight"
-    height="170"
+    src="./profile/github-stats.svg"
+    alt="Rohit Nagar GitHub Statistics"
+    height="180"
   />
   <img
-    src="https://github-stats-extended.vercel.app/api/top-langs/?username=rohiitnagar&layout=compact&theme=tokyonight"
-    height="170"
+    src="./profile/top-langs.svg"
+    alt="Rohit Nagar Most Used Languages"
+    height="180"
   />
 </p>
 
@@ -102,10 +104,9 @@ Secure platform for doctors, pharmacists, and patients.
 <p align="center">
   <img
     src="./profile/streak.svg"
-    alt="GitHub Contribution Streak"
+    alt="Rohit Nagar GitHub Contribution Streak"
   />
 </p>
-
 ---
 
 ## 📫 Connect With Me
