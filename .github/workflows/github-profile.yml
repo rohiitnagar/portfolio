@@ -1,0 +1,64 @@
+name: Update GitHub Profile Cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ==========================================
+      # GitHub Stats - PUBLIC + PRIVATE REPOS
+      # ==========================================
+      - name: Generate GitHub Stats
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=rohiitnagar&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true
+          path: profile/github-stats.svg
+          token: ${{ secrets.GITHUB_STATS_TOKEN }}
+
+      # ==========================================
+      # Top Languages - PUBLIC + PRIVATE REPOS
+      # ==========================================
+      - name: Generate Top Languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=rohiitnagar&layout=compact&langs_count=8&theme=tokyonight&hide_border=true
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_STATS_TOKEN }}
+
+      # ==========================================
+      # Contribution Streak - PRIVATE CONTRIBUTIONS
+      # ==========================================
+      - name: Generate Contribution Streak
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=rohiitnagar&theme=tokyonight&hide_border=true&disable_animations=true
+          path: profile/streak.svg
+          token: ${{ secrets.STREAK_STATS_TOKEN }}
+
+      # ==========================================
+      # Commit generated SVG files
+      # ==========================================
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add profile/*.svg
+
+          git commit -m "Update GitHub profile statistics" || exit 0
+
+          git push
